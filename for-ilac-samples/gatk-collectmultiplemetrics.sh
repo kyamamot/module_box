@@ -9,5 +9,13 @@ do
     CollectMultipleMetrics \
     -I /s3/NCGM/${i}/BWA-GATK/${i}.markdup.bam \
     -O /s3/NCGM/${i}/BWA-GATK/${i}.markdup.CollectMultipleMetrics \
-    -R /scratch/reference/GRCh38.d1.vd1/GRCh38.d1.vd1.fa
+    -R /scratch/reference/GRCh38.d1.vd1/GRCh38.d1.vd1.fa \
+    --PROGRAM CollectAlignmentSummaryMetrics \
+    --PROGRAM CollectInsertSizeMetrics \
+    --PROGRAM QualityScoreDistribution \
+    --PROGRAM MeanQualityByCycle \
+    --PROGRAM CollectBaseDistributionByCycle \
+    --PROGRAM CollectGcBiasMetrics \
+    --PROGRAM CollectSequencingArtifactMetrics \
+    --PROGRAM CollectQualityYieldMetrics
 done
